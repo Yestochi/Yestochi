@@ -1,22 +1,39 @@
-
 name: Pac-Man GitHub Contribution Graph
 
 on:
-  schedule: # todo dia às 00h
+  workflow_dispatch:    # roda manualmente
+  schedule:             # roda todo dia à 00:00
     - cron: "0 0 * * *"
-  workflow_dispatch: # permite rodar manualmente
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
-      - name: Generate Pac-Man SVG
+      - name: Generate Pac-Man SVGs
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: Yestochi
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             output/pacman-contribution-graph.svg
-            output/pacman-contribution-graph-dark.svg
+            output/pacman-contribution-graph-dark.svg?palette=github-dark
+
+      - name: Commit and push generated images to output branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # cria a pasta se nao existir e adiciona os arquivos
+          git add output/*.svg
+          git commit -m "chore: update pacman graphs" || echo "No changes to commit"
+          # empurra para o branch 'output' (vai criar o branch se não existir)
+          git push origin HEAD:output
