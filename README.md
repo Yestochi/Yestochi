@@ -9,7 +9,9 @@
 
 ###
 
-<img align="right" height="150" src="https://images-ext-1.discordapp.net/external/HQVKpLUANy6SM8vGwx8ScxSFMBOVABCHEp3fuZfjSt8/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/536568228198088724/a_8019e3662276a9890190d3897023d116.gif"  />
+<br clear="both">
+
+<img align="right" height="150" src="https://cdn.discordapp.com/avatars/1334554209911312406/a_f152e25859822652bb25b018683ac10a.gif?size=2048"  />
 
 ###
 
@@ -28,8 +30,6 @@
 </div>
 
 ###
-
-<br clear="both">
 
 <img src="https://raw.githubusercontent.com/maurodesouz/maurodesouz/output/snake.svg" alt="Snake animation" />
 
