@@ -37,10 +37,6 @@
 
 ###
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Yestochi/Yestochi/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Yestochi/Yestochi/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Yestochi/Yestochi/output/pacman-contribution-graph.svg">
-</picture>
-
-###
+<!-- Gráfico Pac-Man -->
+![pacman contribution graph (light)](https://raw.githubusercontent.com/Yestochi/Yestochi/output/pacman-contribution-graph.svg#gh-light-mode-only)
+![pacman contribution graph (dark)](https://raw.githubusercontent.com/Yestochi/Yestochi/output/pacman-contribution-graph-dark.svg#gh-dark-mode-only)
